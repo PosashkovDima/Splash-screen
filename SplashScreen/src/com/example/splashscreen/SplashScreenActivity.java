@@ -19,11 +19,8 @@ public class SplashScreenActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		startHomeScreenActivity();
-
 		if (savedInstanceState == null) {
-			getSupportFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
+			startHomeScreenActivity();
 		}
 	}
 
@@ -36,11 +33,11 @@ public class SplashScreenActivity extends ActionBarActivity {
 
 			@Override
 			public void run() {
+				SplashScreenActivity.this.finish();
 				Intent intent = new Intent(SplashScreenActivity.this,
 						HomeScreenActivity.class);
 				startActivity(intent);
 
-				finish();
 			}
 		}, SPLASH_SCREEN_DELAY);
 	}
