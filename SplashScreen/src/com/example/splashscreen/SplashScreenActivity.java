@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 public class SplashScreenActivity extends ActionBarActivity {
+	private static final int SPLASH_SCREEN_DELAY = 2000;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +32,6 @@ public class SplashScreenActivity extends ActionBarActivity {
 	 */
 	private void startHomeScreenActivity() {
 
-		int SPLASH_SCREEN_DELAY = 2000;
 		new Handler().postDelayed(new Runnable() {
 
 			@Override

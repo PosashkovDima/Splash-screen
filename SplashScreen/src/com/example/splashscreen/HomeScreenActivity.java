@@ -6,6 +6,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class HomeScreenActivity extends Activity {
+	private static final int ITEMS_COUNT = 20;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -18,7 +20,6 @@ public class HomeScreenActivity extends Activity {
 	 */
 	private void addItemsToList() {
 
-		int ITEMS_COUNT = 20;
 		ListView listView = (ListView) findViewById(R.id.listView);
 		String[] items = new String[ITEMS_COUNT];
 
